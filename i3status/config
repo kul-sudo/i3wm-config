@@ -1,0 +1,15 @@
+general {
+	colors = false
+	interval = 5
+}
+
+order += "battery 1"
+order += "tztime local"
+
+battery 1 {
+	format = "%percentage"
+}
+
+tztime local {
+	format = "%a %d %b %Y %H:%M"
+}
