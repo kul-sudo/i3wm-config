@@ -3,8 +3,14 @@ general {
 	interval = 5
 }
 
+order += "volume master"
 order += "battery 1"
 order += "tztime local"
+
+volume master {
+	format = "%volume"
+	format_muted = "0%"
+}
 
 battery 1 {
 	format = "%percentage"

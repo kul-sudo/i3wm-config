@@ -4,3 +4,4 @@ xrandr --output HDMI-1 --mode 1920x1080_70.00
 xrandr --output HDMI-1 --primary --left-of eDP-1
 
 picom -b
+xset r rate 220 32

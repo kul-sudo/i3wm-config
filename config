@@ -2,7 +2,7 @@ exec --no-startup-id ~/.config/i3/commands.sh
 
 set $mod Mod4
 
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec kitty 
 bindsym $mod+c kill
 bindsym $mod+f fullscreen
 
@@ -53,8 +53,12 @@ bindsym $mod+v splitv
 
 bindsym $mod+r exec dmenu_run
 
-bindsym XF86AudioRaiseVolume exec mixer vol vol.volume=+3%
-bindsym XF86AudioLowerVolume exec mixer vol vol.volume=-3%
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
+bindsym XF86AudioMute exec amixer -q sset Master toggle
+bindsym XF86AudioMicMute exec amixer set Capture toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%- -q
+bindsym XF86MonBrightnessUp exec brightnessctl set 1%+ -q"
 
 bar {
 	status_command i3status --config ~/.config/i3status/config
