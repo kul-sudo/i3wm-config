@@ -2,7 +2,7 @@ exec --no-startup-id ~/.config/i3/commands.sh
 
 set $mod Mod4
 
-bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec alacritty 
 bindsym $mod+c kill
 bindsym $mod+f fullscreen
 
